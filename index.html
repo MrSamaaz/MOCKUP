@@ -320,8 +320,48 @@
     const t = document.querySelector('.testimonials');
     t && (t.onwheel = (ev)=>{if(Math.abs(ev.deltaY)>10){t.scrollLeft += ev.deltaY; ev.preventDefault();}})
   </script>
+         <!-- Backend -->
 </body>
+            <script>
+    function handleBooking(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const status = document.getElementById("bookingStatus");
+
+      status.textContent = "Sending...";
+
+      fetch("https://script.google.com/macros/s/AKfycbxQmiTrMdEBZOd6M9b9nD6i3sVEoo1tWAnLQx4t8iaQQJiuvxUFEEV-cfaaJ_kv17CR/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          org: form.org.value,
+          name: form.name.value,
+          email: form.email.value,
+          phone: form.phone.value,
+          service: form.service.value,
+          dates: form.dates.value,
+          details: form.details.value
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === "success") {
+          status.textContent = "Request sent successfully!";
+          form.reset();
+        } else {
+          status.textContent = "Something went wrong. Please try again.";
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        status.textContent = "Error sending request. Please try again.";
+      });
+    }
+    </script>
+  </body>
 </html>
+
 
 
 
