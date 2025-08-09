@@ -323,44 +323,45 @@
          <!-- Backend -->
 </body>
             <script>
-    function handleBooking(e) {
-      e.preventDefault();
-      
-      const form = e.target;
-      const status = document.getElementById("bookingStatus");
+    async function handleBooking(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    org: form.org.value,
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    service: form.service.value,
+    dates: form.dates.value,
+    details: form.details.value
+  };
+  const status = document.getElementById('bookingStatus');
+  status.textContent = 'Sending...';
 
-      status.textContent = "Sending...";
+  try {
+    const response = await fetch('YOUR_APPS_SCRIPT_WEB_APP_URL', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
 
-      fetch("https://script.google.com/macros/s/AKfycbxQmiTrMdEBZOd6M9b9nD6i3sVEoo1tWAnLQx4t8iaQQJiuvxUFEEV-cfaaJ_kv17CR/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          org: form.org.value,
-          name: form.name.value,
-          email: form.email.value,
-          phone: form.phone.value,
-          service: form.service.value,
-          dates: form.dates.value,
-          details: form.details.value
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.result === "success") {
-          status.textContent = "Request sent successfully!";
-          form.reset();
-        } else {
-          status.textContent = "Something went wrong. Please try again.";
-        }
-      })
-      .catch(err => {
-        console.error(err);
-        status.textContent = "Error sending request. Please try again.";
-      });
+    if (result.result === 'success') {
+      status.textContent = 'Request sent — we will contact you within 48 hours.';
+      form.reset();
+    } else {
+      status.textContent = 'Failed to send. Please try again or email info@firestar-usa.example';
+      console.error('Apps Script error:', result.error);
     }
+  } catch (err) {
+    console.error(err);
+    status.textContent = 'Error sending request. Please email info@firestar-usa.example';
+  }
+}
     </script>
   </body>
 </html>
+
 
 
 
