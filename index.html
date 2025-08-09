@@ -296,29 +296,6 @@
     // Small client-side behaviors
     function scrollToBooking(){document.getElementById('booking').scrollIntoView({behavior:'smooth'})}
     document.getElementById('bookNow').addEventListener('click', scrollToBooking)
-
-    async function handleBooking(e){
-      e.preventDefault();
-      const form = e.target;
-      const data = {org:form.org.value,name:form.name.value,email:form.email.value,phone:form.phone.value,service:form.service.value,dates:form.dates.value,details:form.details.value}
-      const status = document.getElementById('bookingStatus');
-      status.textContent = 'Sending...';
-
-      // Default behavior: show confirmation and log. Replace fetch URL with your backend or use Formspree/Netlify.
-      try{
-        // Example fetch to a backend endpoint -- change '/api/book' to real endpoint
-        // await fetch('/api/book',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-        console.log('Booking payload',data);
-        status.textContent = 'Request sent — we will contact you within 48 hours.';
-        form.reset();
-      }catch(err){
-        status.textContent = 'Failed to send. Please email info@firestar-usa.example';
-      }
-    }
-
-    // Small accessibility: allow arrow scrolling for testimonials
-    const t = document.querySelector('.testimonials');
-    t && (t.onwheel = (ev)=>{if(Math.abs(ev.deltaY)>10){t.scrollLeft += ev.deltaY; ev.preventDefault();}})
   </script>
          <!-- Backend -->
 </body>
@@ -360,6 +337,7 @@
     </script>
   </body>
 </html>
+
 
 
 
