@@ -1,7 +1,3 @@
-<!--
-
--->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,85 +6,79 @@
   <title>Firestar Training Inc. USA</title>
   <meta name="description" content="Professional firefighter training, live fire, vehicle rescue, confined space, hazmat — in {{CITY, STATE}} and nationwide." />
   <style>
-    :root{
-      --accent:#d72638; /* fire engine red */
-      --accent-2:#ff7b00; /* orange */
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --glass: rgba(255,255,255,0.04);
-      --radius:14px;
-      --max-width:1100px;
-      --gap:20px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6;line-height:1.45}
-    .wrap{max-width:var(--max-width);margin:36px auto;padding:0 20px}
-    header{display:flex;justify-content:space-between;align-items:center}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-grid;place-items:center;font-weight:700}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-    nav a:hover{color:white}
+:root {
+  --accent  :  #d72638;
+  --accent-2  :  #ff7b00;
+  --bg  :  #0f1724;
+  --card  :  #0b1220;
+  --muted  :  #9aa4b2;
+  --glass  :  rgba(255,255,255,0.04);
+  --radius  :  14px;
+  --max-width  :  1100px;
+  --gap  :  20px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+  color-scheme: dark;
+}
 
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;margin-top:26px}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius);backdrop-filter: blur(6px);}
-    h1{font-size:clamp(26px,4.5vw,44px);margin:0 0 12px}
-    p.lead{color:var(--muted);margin:0 0 20px}
-    .cta-row{display:flex;gap:12px}
-    .btn{background:var(--accent);border:none;padding:12px 16px;border-radius:10px;color:white;font-weight:600;cursor:pointer}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+* { box-sizing: border-box }
+body { margin: 0; background: linear-gradient(180deg, var(--bg), #071021); color: #e6eef6; line-height: 1.45 }
+.wrap { max-width: var(--max-width); margin: 36px auto; padding: 0 20px }
+header { display: flex; justify-content: space-between; align-items: center }
+.brand { display: flex; gap: 12px; align-items: center }
+.logo { width: 54px; height: 54px; border-radius: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: inline-grid; place-items: center; font-weight: 700 }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px }
+nav a:hover { color: white }
 
-    /* Services grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap);margin-top:28px}
-    .card{background:var(--card);padding:18px;border-radius:12px}
-    .icon{width:48px;height:48px;border-radius:10px;background:var(--glass);display:inline-grid;place-items:center;margin-bottom:12px}
+.hero { display: grid; grid-template-columns: 1fr 420px; gap: 36px; align-items: center; margin-top: 26px }
+.hero-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 28px; border-radius: var(--radius); backdrop-filter: blur(6px); }
+h1 { font-size: clamp(26px, 4.5vw, 44px); margin: 0 0 12px }
+p.lead { color: var(--muted); margin: 0 0 20px }
+.cta-row { display: flex; gap: 12px }
+.btn { background: var(--accent); border: none; padding: 12px 16px; border-radius: 10px; color: white; font-weight: 600; cursor: pointer }
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: var(--muted) }
 
-    /* About + instructors */
-    .about{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:36px}
-    .instructors{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:16px;border-radius:12px}
-    .instructor{display:flex;gap:12px;align-items:center;margin-bottom:12px}
-    .avatar{width:52px;height:52px;border-radius:10px;background:linear-gradient(180deg,#fff2,#fff1);display:inline-block}
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap); margin-top: 28px }
+.card { background: var(--card); padding: 18px; border-radius: 12px }
+.icon { width: 48px; height: 48px; border-radius: 10px; background: var(--glass); display: inline-grid; place-items: center; margin-bottom: 12px }
 
-    /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
-    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.about { display: grid; grid-template-columns: 1fr 320px; gap: 24px; margin-top: 36px }
+.instructors { background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding: 16px; border-radius: 12px }
+.instructor { display: flex; gap: 12px; align-items: center; margin-bottom: 12px }
+.avatar { width: 52px; height: 52px; border-radius: 10px; background: linear-gradient(180deg, #fff2, #fff1); display: inline-block }
 
-    /* Testimonials */
-    .testimonials{display:grid;grid-auto-flow:column;gap:12px;overflow:auto;padding-bottom:6px}
-    .testimonial{min-width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:8px}
+.testimonials { display: grid; grid-auto-flow: column; gap: 12px; overflow: auto; padding-bottom: 6px }
+.testimonial { min-width: 260px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding: 12px; border-radius: 8px }
 
-    footer{margin-top:40px;padding:20px 0;color:var(--muted);text-align:center}
+footer { margin-top: 40px; padding: 20px 0; color: var(--muted); text-align: center }
 
-    /* Contact & booking */
-    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:26px}
-    form{display:grid;gap:10px}
-    input,textarea,select{background:#071021;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:inherit}
-    textarea{min-height:110px}
-    .small{font-size:13px;color:var(--muted)}
+.contact-grid { display: grid; grid-template-columns: 1fr 360px; gap: 20px; margin-top: 26px }
+form { display: grid; gap: 10px }
+input, textarea, select { background: #071021; border: 1px solid rgba(255,255,255,0.04); padding: 10px; border-radius: 8px; color: inherit }
+textarea { min-height: 110px }
+.small { font-size: 13px; color: var(--muted) }
 
-    /* Responsive */
-    @media (max-width:980px){.hero{grid-template-columns:1fr} .about{grid-template-columns:1fr} .contact-grid{grid-template-columns:1fr} .gallery{grid-template-columns:repeat(2,1fr)} }
-    @media (max-width:520px){.gallery img{height:100px} .testimonials{grid-auto-flow:row} nav{display:none}}
+.subhead { margin-top: 28px; font-size: 18px; font-weight:700; color: #e6eef6; }
+
+@media (max-width: 980px){ .hero { grid-template-columns: 1fr } .about { grid-template-columns: 1fr } .contact-grid { grid-template-columns: 1fr } .gallery { grid-template-columns: repeat(2, 1fr) } }
+@media (max-width: 520px){ .gallery img { height: 100px } .testimonials { grid-auto-flow: row } nav { display: none } }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <div class="brand">
-        <img src="./Images/FS LOGO.png" alt="Firestar Services USA" class="logo">
-      <div>
+        <img src="images/FS LOGO.png" alt="Firestar Services USA" class="logo">
+        <div>
           <div style="font-weight:700">Firestar Services Inc. USA.</div>
           <div class="small">Professional firefighter training — Michigan & nationwide</div>
         </div>
       </div>
+
       <nav aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#booking">Book</a>
-        <a href="#booking">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -101,41 +91,19 @@
             <button class="btn" id="bookNow">Request a Quote</button>
             <a class="btn ghost" href="#services">See Services</a>
           </div>
-
-          <div class="grid" style="margin-top:18px">
-            <div class="card">
-              <div class="icon">🔥</div>
-              <strong>Live Fire Training</strong>
-              <div class="small" style="margin-top:8px">Controlled burn scenarios, safety-first, NFPA-aligned drills.</div>
-            </div>
-            <div class="card">
-              <div class="icon">🚑</div>
-              <strong>Vehicle Extrication</strong>
-              <div class="small" style="margin-top:8px">RIT, stabilization, tool training and entrapment rescue.</div>
-            </div>
-            <div class="card">
-              <div class="icon">🧯</div>
-              <strong>Confined Space & Rescue</strong>
-              <div class="small" style="margin-top:8px">Entry procedures, air monitoring, victim removal techniques.</div>
-            </div>
-            <div class="card">
-              <div class="icon">☣️</div>
-              <strong>Hazmat Response</strong>
-              <div class="small" style="margin-top:8px">Proper PPE, decontamination and incident command integration.</div>
-            </div>
-          </div>
         </div>
 
         <aside style="padding:12px;border-radius:12px;align-self:start;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
           <picture>
             <source srcset="" />
-            <img src="./Images/temp_image_37DA7516-769C-4F42-995B-AC2A45C73DEB.png" alt="Training burn exercise" style="width:100%;height:280px;object-fit:cover;border-radius:10px;display:block;"/>
+            <img src="images/temp_image_37DA7516-769C-4F42-995B-AC2A45C73DEB.png" alt="Training burn exercise" style="width:100%;height:280px;object-fit:cover;border-radius:10px;display:block;" />
           </picture>
+
           <div style="margin-top:12px">
             <div style="display:flex;justify-content:space-between;align-items:center">
               <div>
                 <div style="font-weight:700">Next open course</div>
-                <div class="small">Sat, 8/16/2025 — Live Fire Basics (Sarnia, ON & Michigan, rotating)</div>
+                <div class="small">Sat, 8/16/2025  — Live Fire Basics (Sarnia, ON & Michigan, rotating)</div>
               </div>
               <button class="btn" onclick="scrollToBooking()">Join Waitlist</button>
             </div>
@@ -144,48 +112,321 @@
       </section>
 
       <section id="services" aria-labelledby="services-title">
-        <h2 style="margin-top:36px">Services</h2>
+        <h2 style="margin-top:36px" id="services-title">Services</h2>
         <p class="small">Courses tailored for volunteer and professional departments, private industry fire brigades, and municipal training divisions.</p>
+
         <div class="grid" style="margin-top:12px">
           <div class="card">
             <h3>Live-Fire Evolution</h3>
-            <p class="small">Full-scale burn props, nozzle work, search & rescue under fire, sesnible class sizes for safety & quality.</p>
+            <p class="small">Full-scale burn props, nozzle work, search & rescue under fire, sensible class sizes for safety & quality.</p>
           </div>
+
           <div class="card">
             <h3>Vehicle & Technical Rescue</h3>
             <p class="small">Stabilization, hydraulic tool operation, patient packaging and multi-agency extrication drills.</p>
           </div>
+
           <div class="card">
             <h3>Confined Space</h3>
             <p class="small">Entry permits, atmospheric testing, rope systems and rescue planning.</p>
           </div>
+
           <div class="card">
             <h3>Hazmat & CBRN Awareness</h3>
             <p class="small">PPE levels, detection equipment, decontamination corridors, and unified command scenarios.</p>
           </div>
+
           <div class="card">
             <h3>Cert Prep & On-Site Evaluations</h3>
             <p class="small">Customized to NFPA standards — skill sheets, written prep and live-performance testing.</p>
           </div>
+
           <div class="card">
             <h3>Consulting & Facility Design</h3>
             <p class="small">Training props, burn building design advice, and safety program development.</p>
           </div>
         </div>
+
+        <div class="subhead">Training Services</div>
+        <div class="grid" style="margin-top:12px">
+
+          <div class="card">
+            <h3>SBS Transitional Fire Attack</h3>
+            <p class="small">This program deals with the new science released by NIST and UL dealing with fire loads, temperature reduction, and aggressive fire attacks for the rescue, vent limited fires and resetting the fire.</p>
+          </div>
+
+          <div class="card">
+            <h3>SBS Garden Apartments/Row Houses</h3>
+            <p class="small">This program deals with fire suppression efforts with garden apartments and row housing. Setbacks, attack lines, leader lines, aggressive fire attack, aggressive ventilation and search are looked at with live fire exercises.</p>
+          </div>
+
+          <div class="card">
+            <h3>NFPA 1403 Introduction to Live Fire</h3>
+            <p class="small">This program is for firefighters that are new to the fire service and also for firefighters that have been in the fire service for any length of time. Students will be made aware of the difference between ‘controlling a fire’ and ‘extinguishing a fire’ and the reasons for both.  Students will also be aware of the need for a quick transition between water application and ventilation to avoid burns from steam generated when performing coordinated fire attack. Students will be made aware of the expansion rate of water (conversion to steam at 1700 x), and the danger of large volumes of water/steam in a superheated environment.</p>
+          </div>
+
+          <div class="card">
+            <h3>NFPA 1403 Live Fire Training – Acquired or Fixed buildings</h3>
+            <p class="small">Live fire training in either acquired structures or fixed burn facility as per NFPA 1403 standards.  Topics include; proper hose management, fire stream application, search and fire control are covered.</p>
+          </div>
+
+          <div class="card">
+            <h3>Flashover Recognition Training</h3>
+            <p class="small">Training with live fire in a flashover simulator showing the development of fire and the characteristics of behavior of fire.</p>
+          </div>
+
+          <div class="card">
+            <h3>Live Fire Instructor</h3>
+            <p class="small">This program teaches potential instructors on the proper techniques and standards to be followed when conducting live fire training.  Whether in a fixed burn facility or an acquired structure, our instructors have the experience and expertise to teach your instructors the process for both.  Topics covered include NFPA 1403 review, establishing your matrix, conducting a walk thru, creating a site layout plan, building effective burn sets, gear inspections, establishing medical and rehab system, accountability, fireground safety, using the Incident Command System, RIT and classroom instruction.</p>
+          </div>
+
+          <div class="card">
+            <h3>Fire Extinguisher Training</h3>
+            <p class="small">This hands on training class focuses on the use of portable fire extinguishers for workplace employees. Instruction on the types of portable fire extinguishers, the classes of fire, how to use and discharge using the PASS acronym are covered in the class. Each participant will extinguish a Class A/B fire with a portable fire extinguisher.</p>
+          </div>
+
+          <div class="card">
+            <h3>Residential Fire Rescue</h3>
+            <p class="small">Rescuing civilian fire victims from residential structures is the main focus of our job.  This program focuses upon the skills needed to effectively rescue victims.  In class session details the the theory behind where to find our victims, the causes of fire victim fatalities, sizing up structures for rescue, tools needed for the job, search methods and strategy.   The practical hands on training session will reinforce the theory portion by introducing skill stations such as:</p>
+            <p class="small"><strong>Skill stations include:</strong></p>
+            <ul class="small">
+              <li>Conscious victim rescue – ladder</li>
+              <li>Conscious victim rescue – hysterical walking</li>
+              <li>Unconscious victim drags – clothes, one man, two man, webbing, feet first, head first, obese people,</li>
+              <li>Unconscious victim rescue drag – up/down stairs</li>
+              <li>Unconscious victim ladder rescues</li>
+              <li>Different search techniques</li>
+              <li>Burn victim removal</li>
+              <li>Small children/infants</li>
+              <li>Proper ground ladder techniques</li>
+            </ul>
+            <p class="small">Scenarios are then conducted to give the student a chance to demonstrate and understand the importance of performing an effective rescue.</p>
+          </div>
+
+          <div class="card">
+            <h3>Command & Control</h3>
+            <p class="small">This training series focuses upon developing the skills of the company officer or those who want to become a company officer. Instruction on the Incident Safety Officer, Introduction to the Incident Command System (ICS), ICS for Single Resources & Multiple Resources Initial Action Incidents is covered. In class scenarios are used to strengthen the participants understanding of how to use the ICS. Once in class sessions are complete, the participant will exercise their skills with roll in drills utilizing crew members under their command. This class can be conducted as a live fire training exercise or with live smoke drills.</p>
+          </div>
+
+          <div class="card">
+            <h3>Incident Command training</h3>
+            <p class="small">Training individuals on the proper procedure of Incident Command with scenarios and classroom instruction.</p>
+          </div>
+
+          <div class="card">
+            <h3>Firefighter Survival</h3>
+            <p class="small">This is a comprehensive program dealing with the knowledge and skill needed to effect rescue as a member of a Rapid Intervention Team. The course also demonstrates ‘last-ditch’ self-rescue techniques (some of which are not seen in the books). These emergency procedures, though involving some risk themselves, are designed to be useable when the only other alternative is to die. Emphasis will be placed on search techniques, communications, accountability, and self-rescue procedures. This course is best suited to students who, in addition to the prerequisite training, have at least a ‘ground-floor’ level of on-the-street practical firefighting experience.</p>
+          </div>
+
+          <div class="card">
+            <h3>Advanced Firefighter Survival</h3>
+            <p class="small">This course deals with the advanced techniques available that can be employed by a firefighter to quickly and effectively evacuate a structure involved with fire. These techniques are last ditch efforts that are to be used only when it is a life or death situation. Topics looked at are:</p>
+            <ul class="small">
+              <li>Low/high window exits</li>
+              <li>Bail out kits</li>
+              <li>Combined ladder dives with window straddles</li>
+              <li>Diminishing clearances and low profiling</li>
+              <li>Drop In Drill</li>
+              <li>Commercial Buildings</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>R.I.T. Training (Operations & Advanced)</h3>
+            <p class="small">Training firefighters to rescue firefighters, who are lost, trapped or injured.  Training will cover SCBA changeovers, face piece changeover, enlarged openings, sub level rescues, Denver drill, Pittsburgh drill, removing firefighters up and down stairs and scenarios.</p>
+          </div>
+
+          <div class="card">
+            <h3>RIT Train the Trainer</h3>
+            <p class="small">A four to five day program geared towards individuals who will be instructing on RIT.  The class covers Firefighter Survival and RIT programs.  In class theory sessions cover the history of both Firefighter Survival and RIT, the need for both, how to implement them on the fireground, MAYDAY’s, tactical considerations and safety.</p>
+          </div>
+
+          <div class="card">
+            <h3>NFPA 472 Hazardous Materials</h3>
+            <p class="small">NFPA 472 Hazardous Materials Awareness<br>
+            NFPA 472 Hazardous Materials Awareness Refresher<br>
+            NFPA 472 Hazardous Materials Operations<br>
+            NFPA 472 Hazardous Materials Operations Refresher<br>
+            NFPA 472 Hazardous Materials Technician</p>
+          </div>
+
+          <div class="card">
+            <h3>Pump Operations</h3>
+            <p class="small">This course provides the fire fighter with an introduction to basic pump construction and theory as well as operating techniques in this course. Emphasis is placed on getting water to the pump, getting water from the pump for hose streams, and prevention of common mistakes in pump operations. Topics covered include: friction loss, relay pumping, master and elevated master streams.</p>
+          </div>
+
+          <div class="card">
+            <h3>Cutters Edge Power Saw Safety Training</h3>
+            <p class="small">Safe and effective means of operating a power saw.  Topics include maintenance, sharpening and cutting.</p>
+          </div>
+
+          <div class="card">
+            <h3>SCBA training</h3>
+            <p class="small">This course is designed to familiarize the student with basic respiratory protection. Topics include: the human respiratory system, effects of toxic atmospheres, and self-contained breathing apparatus. Live drills are part of this course.</p>
+          </div>
+
+          <div class="card">
+            <h3>Fire Ground Ventilation</h3>
+            <p class="small">This course will provide the student with the knowledge and skills to safely and efficiently perform ventilation in various situations. Topics include: building construction, air movement, tools and their use, natural and forced ventilation, and negative and positive pressure ventilation.</p>
+          </div>
+
+          <div class="card">
+            <h3>Truck Company Operations 1</h3>
+            <p class="small">This course will introduce the student to the basic duties of a truck company including hand and power tool operation, search and rescue, and ventilation. Truck company support to the engine company is also covered.</p>
+          </div>
+
+          <div class="card">
+            <h3>Truck Company Operations 2</h3>
+            <p class="small">This course is designed for the fire fighter to apply and refine his/her knowledge of truck company operations. Topics include: vehicle placement, forcible entry, search and rescue, water supply, aerial operation, building construction, fire travel, and ventilation.</p>
+          </div>
+
+          <div class="card">
+            <h3>Truck Company Combat Drills</h3>
+            <p class="small">This would be an 8 hour hands on training class and would entail the following:</p>
+            <ul class="small">
+              <li>4 hours of skill review and development on vertical ventilation, flat roof ventilation, search procedures and forcible entry.</li>
+              <li>4 hours of scenario based drills. Each participant is assigned to a team of 6 firefighters. Each team will create their own two person teams in which they will compete through a series of drills as a team. The drills to be completed are: vertical and flat roof ventilation, forcible entry, and a traditional search.</li>
+              <li>Each evolution is timed so as to implement a competitive atmosphere for learning and enjoyment</li>
+              <li>All teams will complete every evolution at least three times so that they experience all three skill stations in real time</li>
+              <li>Times will be recorded to see which team was the fastest team</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Forcible Entry</h3>
+            <p class="small">This class will be an 8 hour hands on class dealing with conventional forcible entry using a door prop, a K-12 post prop, a garage door prop and a C-Side door prop. Topics to be covered off will be:</p>
+            <ul class="small">
+              <li>Safe operations of a rotary power saw</li>
+              <li>Conventional forcible entry using a haligan and a flat head axe</li>
+              <li>Shearing off carriage bolt heads</li>
+              <li>Dead bolts</li>
+              <li>Garage doors</li>
+              <li>Different cutting positions with the rotary saw</li>
+              <li>Alternative methods with different hand tools</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Power Saw Operations</h3>
+            <p class="small">This class is an eight hour class dealing with the proper use and operation of power saws in different positions and situations. The use of a ventilation trailer prop may be utilized if available. This class can be combined with a forcible entry class using the power saw props and the forcible door entry props.</p>
+          </div>
+
+          <div class="card">
+            <h3>Engine Company Operations</h3>
+            <p class="small">This course provides instruction in the duties and responsibilities of an engine company. Topics include: positioning of apparatus, use of attack and back-up lines, search and rescue, and water supply.</p>
+          </div>
+
+          <div class="card">
+            <h3>Aerial Operations</h3>
+            <p class="small">This course provides a more in depth exposure to the operating principles and procedures for aerial devices through hands-on exercises.</p>
+          </div>
+
+          <div class="card">
+            <h3>Emergency vehicles operations course (EVOC)</h3>
+            <p class="small">This course, developed by Volunteer Firemen’s Insurance Services, provides instruction in techniques of driving emergency vehicles under all conditions. Students will learn the importance of vehicle dynamics, driver selection, condition and preparation on safe vehicle operations. The course includes practice on a driving course laid out to simulate various driving conditions. Also included is a section on service and preventive maintenance.</p>
+          </div>
+
+          <div class="card">
+            <h3>Defensive driving</h3>
+            <p class="small">Coaching the Emergency Vehicle Operator series is utilized for this training course.  Participants will work through various units on the important principles of defensive driving.</p>
+          </div>
+
+        </div>
+
+        <div class="subhead">Consulting Services</div>
+        <div class="grid" style="margin-top:12px">
+          <div class="card">
+            <h3>Consulting Services (Firestar USA LLC)</h3>
+            <p class="small">Firestar USA LLC is also able offer consulting services for a variety of different areas in the fire service as well as the private sector such as:</p>
+            <ul class="small">
+              <li>SOP/SOG revision and development</li>
+              <li>Lesson Plan development</li>
+              <li>Training Officer Development</li>
+              <li>Company Officer Development</li>
+              <li>Accountability System Design</li>
+              <li>Program Development</li>
+              <li>Operational Process review and development</li>
+              <li>Vulnerability studies and risk analysis</li>
+              <li>Risk management assessments</li>
+              <li>Business Continuity management</li>
+              <li>Life Safety Audits</li>
+              <li>Emergency preparation and response plans</li>
+              <li>Fire protection Code compliance</li>
+              <li>Special Hazards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subhead">Certifications</div>
+        <div class="grid" style="margin-top:12px">
+          <div class="card">
+            <h3>NFPA Certification Services</h3>
+            <p class="small">Firestar USA LLC offers training for the following NFPA Professional Qualification levels:</p>
+            <ol class="small">
+              <li>NFPA 1001 Firefighter 1 & 2</li>
+              <li>NFPA 1521 Health & Safety Officer</li>
+              <li>NFPA 1521 Incident Safety Officer</li>
+              <li>NFPA 1021 Fire Officer 1, 2, 3, & 4</li>
+              <li>NFPA 1041 Fire Service Instructor 1, 2 & 3</li>
+              <li>NFPA 1006 Vehicle Machinery Technician Level 1 & 2</li>
+              <li>NFPA 1006 Confined Space Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Rope Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Trench rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Structural Collapse Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Water Rescue Technician Level</li>
+              <li>NFPA 1006 Ice/Water Rescue Technician Level</li>
+              <li>NFPA 1006 Swift Water Rescue Technician Level</li>
+              <li>NFPA 1072 Hazardous Materials Operations & Technician</li>
+            </ol>
+
+            <p class="small">Contact us to request more information about any of the certification levels listed above.</p>
+
+            <p class="small">Firestar Services offers training for the following NFPA Professional Qualification levels -NFPA 1521 -Incident Safety Officer and Health and Safety Officer. Pro Board ® Accredited Certification to the levels of NFPA 1521 Incident Safety Officer and Health and Safety Officer is provided by the Fire Department Safety Officers Association.</p>
+
+            <p class="small">Contact us to request more information about any of the certification levels listed above.</p>
+          </div>
+        </div>
+
       </section>
 
       <section id="about">
         <div class="about">
           <div>
             <h2>About Firestar</h2>
-            <p class="small">Firestar Services Inc. has run professional firefighter training in Sarnia, Ontario since 1993. This U.S. entity — <strong>Firestar Services Inc. USA</strong> — brings the same instructors, safety-first philosophy, and scalable courses to Michigan and nearby states. Lead instructors are cleared, credentialed, and maintain current NFPA certifications.</p>
+            <p class="small">Founded in 2008 in Ontario, Canada, and now serving the U.S., Fire Star USA brings over 17 years of proven experience in delivering high-quality, hands-on firefighter training. Our founder, Mark van der Feyst, built Fire Star around one principle: training should come to you. Instead of requiring departments to travel to distant training centers or enroll in expensive programs, we deliver custom-tailored training on your own grounds, using the facilities, equipment, and resources you already have. This ensures that every drill feels real, relevant, and directly applicable to your department’s needs. We stand by our motto: “practice like we play.” Our instructors each bring more than 20 years of experience, blending time-tested fireground strategies with innovative new methods for firefighting and rescue operations. From live-fire evolutions to technical rescue and hazmat response, every course is designed to prepare your crews for the exact challenges they will face in the field. </p>
+
+            <h3 style="margin-top:14px">Safety Record</h3>
+            <p class="small">One of the things that sets Fire Star USA apart is our unmatched safety record. In more than 17 years of delivering live, hands-on training programs, we have never experienced a major injury, accident, or incident that caused training to be stopped. This is exceptionally uncommon in our industry. Many training organizations, even well-established ones, have faced serious injuries or worse during live-fire scenarios, rescue drills, or high-risk exercises. Fire Star USA’s ability to maintain a perfect record of no loss of life, no loss of limb, and no training days cut short is a direct result of our approach: </p>
+
+            <ul class="small">
+              <li>Strict safety protocols that are enforced at every level</li>
+              <li>Experienced instructors who actively monitor and adjust scenarios in real time</li>
+              <li>Thoughtful class sizes and scenario designs that maximize realism without unnecessary risk</li>
+              <li>A culture of safety where both students and instructors share responsibility for looking out for one another</li>
+            </ul>
+            <p class="small">This track record is more than just a statistic, it’s proof of our philosophy: the best training is safe training. When firefighters leave our courses, they walk away with the skills they need, the confidence to apply them, and the assurance that their safety is respected every step of the way. </p>
+            <p class="small">At Fire Star USA, we are proud to provide the highest-quality, safest, and most accessible firefighter training to departments of every size, career and volunteer alike. </p>
 
             <h3 style="margin-top:14px">Certifications & insurance</h3>
+
             <ul class="small">
-              <li>NFPA-aligned curriculum</li>
-              <li>Fully insured for live-fire operations</li>
-              <li>Certified instructors (list on request)</li>
+              <li>NFPA 1001 Firefighter 1 & 2</li>
+              <li>NFPA 1521 Health & Safety Officer</li>
+              <li>NFPA 1521 Incident Safety Officer</li>
+              <li>NFPA 1021 Fire Officer 1, 2, 3, & 4</li>
+              <li>NFPA 1041 Fire Service Instructor 1, 2 & 3</li>
+              <li>NFPA 1006 Vehicle Machinery Technician Level 1 & 2</li>
+              <li>NFPA 1006 Confined Space Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Rope Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Trench rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Structural Collapse Rescue Technician Level 1 & 2</li>
+              <li>NFPA 1006 Water Rescue Technician Level</li>
+              <li>NFPA 1006 Ice/Water Rescue Technician Level</li>
+              <li>NFPA 1006 Swift Water Rescue Technician Level</li>
+              <li>NFPA 1072 Hazardous Materials Operations & Technician</li>
             </ul>
+
+            <p class="small">Contact us to request more information about any of the certification levels listed above.</p>
 
             <h3 style="margin-top:14px">Why departments choose us</h3>
             <ul class="small">
@@ -194,32 +435,27 @@
               <li>Flexible scheduling and on-site deployments</li>
             </ul>
 
-            <h3 style="margin-top:14px">Gallery</h3>
-            <div class="gallery" aria-hidden>
-              <img src="./Images/RT.png" alt="Rescue training">
-              <img src="./Images/VE.png" alt="Vehicle extrication">
-              <img src="./Images/IT.png" alt="Instructor coaching">
-            </div>
-
           </div>
 
           <aside class="instructors" aria-labelledby="instructors-title">
             <h3 id="instructors-title">Lead Instructors</h3>
             <div class="instructor">
-              <img src="./Images/ADAM.png" alt="Adam Van Der Fyst" class="avatar">
+              <img src="images/ADAM.png" alt="Adam Van Der Fyst" class="avatar">
               <div>
                 <div style="font-weight:700">Adam Van Der Fyst</div>
                 <div class="small">Lead Instructor & Operations</div>
               </div>
             </div>
+
             <div class="instructor">
-              <img src="./Images/mark.png" alt="Mark Van Der Fyst" class="avatar">
+              <img src="images/mark.png" alt="Mark Van Der Fyst" class="avatar">
               <div>
                 <div style="font-weight:700">Chief Trainer, Mark Van Der Fyst</div>
                 <div class="small">25+ years — structural and wildland experience</div>
               </div>
             </div>
-            <div style="margin-top:8px" class="small">Want the full instructor bios, credentials, and insurance documentation available on request? <a href="#booking">Contact us</a>.</div>
+
+            <div style="margin-top:8px" class="small">Want the full instructor bios, credentials, and insurance documentation available on request? <a href="#contact">Contact us</a>.</div>
           </aside>
         </div>
       </section>
@@ -230,23 +466,25 @@
 
         <div class="contact-grid">
           <form id="bookingForm" onsubmit="handleBooking(event)">
-            <label class="small">Organization or Name<input name="org" placeholder="Dept. or company" required></label>
-            <label class="small">Contact name<input name="name" placeholder="Your full name" required></label>
-            <label class="small">Email<input type="email" name="email" placeholder="you@domain.com" required></label>
-            <label class="small">Phone<input type="tel" name="phone" placeholder="(555) 555-5555"></label>
-            <label class="small">Service<select name="service">
-              <option>Live-Fire Evolution</option>
-              <option>Vehicle Extrication</option>
-              <option>Confined Space Rescue</option>
-              <option>Hazmat Response</option>
-              <option>Consulting / Props</option>
+            <label class="small">Organization or Name <input name="org" placeholder="Dept. or company" required></label>
+            <label class="small">Contact name <input name="name" placeholder="Your full name" required></label>
+            <label class="small">Email <input type="email" name="email" placeholder="you@domain.com" required></label>
+            <label class="small">Phone <input type="tel" name="phone" placeholder="(555) 555-5555"></label>
+            <label class="small">Service <select name="service">
+              <option>Training</option>
+              <option>Consulting</option>
+              <option>Certification</option>
+              <option>More Information</option>
+              <option>Other</option>
             </select></label>
-            <label class="small">Preferred date(s)<input name="dates" placeholder="MM/DD/YYYY or date range"></label>
-            <label class="small">Details<textarea name="details" placeholder="Number of students, equipment needs, location specifics"></textarea></label>
+            <label class="small">Preferred date(s) <input name="dates" placeholder="MM/DD/YYYY or date range"></label>
+            <label class="small">Details <textarea name="details" placeholder="Number of students, equipment needs, location specifics"></textarea></label>
+
             <div style="display:flex;gap:10px;align-items:center">
               <button class="btn" type="submit">Send request</button>
               <div id="bookingStatus" class="small" aria-live="polite"></div>
             </div>
+
             <div class="small" style="margin-top:6px">By submitting you agree to be contacted. For urgent inquiries call <strong>+1 810-941-7951</strong>.</div>
           </form>
 
@@ -259,21 +497,15 @@
 
             <h4 style="margin-top:12px">Map</h4>
             <div style="background:#071021;padding:8px;border-radius:8px">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2772.647918363532!2d-82.4967018!3d43.02086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259940ab308dbd%3A0x273635da2052c401!2s3861%20State%20Rd%2C%20Fort%20Gratiot%20Township%2C%20MI%2048059!5e1!3m2!1sen!2sus!4v1754696718843!5m2!1sen!2sus"
-              width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="true"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+              <iframe src="https://www.google.com/maps/place/3861+State+Rd,+Fort+Gratiot+Townshi p,+MI+48059/@43.02086,-82.4973455,159m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88259 940ab308dbd:0x273635da2052c401!8m2!3d43.02086!4d-82.4967018!16s%2Fg%2F11gj wfd_18!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDgwNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </aside>
         </div>
       </section>
 
       <section style="margin-top:28px">
-        <h2>Testimonials</h2>
-        <div class="testimonials" aria-live="polite">
-          <div class="testimonial">"Excellent realistic training — our firefighters learned decision-making under stress." — Captain R., Ontario</div>
-          <div class="testimonial">"Great instructors and clear safety procedures. Highly recommend for volunteer brigades." — Lt. M.</div>
-          <div class="testimonial">"Setup and communication were professional from booking to debrief." — City Training Officer</div>
-        </div>
+        <h2>Sponsors</h2>
+
       </section>
 
       <section style="margin-top:28px">
@@ -284,7 +516,6 @@
           <div class="card"><strong>Can you run on-site?</strong><div class="small">Yes. We travel with portable props and can design a scenario to suit your facility.</div></div>
         </div>
       </section>
-
     </main>
 
     <footer>
@@ -293,63 +524,26 @@
   </div>
 
   <script>
-    // Small client-side behaviors
-    function scrollToBooking(){document.getElementById('booking').scrollIntoView({behavior:'smooth'})}
-    document.getElementById('bookNow').addEventListener('click', scrollToBooking)
+  function scrollToBooking(){ document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }) }
+  document.getElementById('bookNow').addEventListener('click', scrollToBooking)
 
-    async function handleBooking(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = {
-    org: form.org.value,
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    service: form.service.value,
-    dates: form.dates.value,
-    details: form.details.value
-  };
-  const status = document.getElementById('bookingStatus');
-  status.textContent = 'Sending...';
-
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbx57BoEdTXI-_MvlLGb3lMUAIAzIbOHxtEfAHUeYok1qOyR6DPgc-zrxQV--HbJGN-1/exec", { // put your GAS URL here in quotes
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.json();
-
-    if (result.result === 'success') {
+  async function handleBooking(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = { org: form.org.value, name: form.name.value, email: form.email.value, phone: form.phone.value, service: form.service.value, dates: form.dates.value, details: form.details.value }
+    const status = document.getElementById('bookingStatus');
+    status.textContent = 'Sending...';
+    try {
+      console.log('Booking payload', data);
       status.textContent = 'Request sent — we will contact you within 48 hours.';
       form.reset();
-    } else {
-      status.textContent = 'Error: ' + result.message;
+    } catch (err) {
+      status.textContent = 'Failed to send. Please email info@firestar-usa.example';
     }
-  } catch (error) {
-    status.textContent = 'Failed to send. Please email info@firestar-usa.example';
   }
-}
-    </script>
-  </body>
+
+  const t = document.querySelector('.testimonials');
+  t && (t.onwheel = (ev) => { if (Math.abs(ev.deltaY) > 10){ t.scrollLeft += ev.deltaY; ev.preventDefault(); } })
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
