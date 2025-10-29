@@ -7,8 +7,10 @@
   <meta name="description" content="Professional firefighter training, live fire, vehicle rescue, confined space, hazmat — in {{CITY, STATE}} and nationwide." />
   <style>
 :root {
-  --accent  :  #d72638;
-  --accent-2  :  #ff7b00;
+  --accent  :  #ffffff;
+  --accent-2  :  #ffffff;
+  --button  :  #d72638;
+  --button-2  :  #deb601;
   --bg  :  #0f1724;
   --card  :  #0b1220;
   --muted  :  #9aa4b2;
@@ -18,6 +20,15 @@
   --gap  :  20px;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
   color-scheme: dark;
+
+  a, a:visited, a:active {
+  color: var(--muted); /* or white, or any custom color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
 }
 
 * { box-sizing: border-box }
@@ -34,7 +45,7 @@ nav a:hover { color: white }
 h1 { font-size: clamp(26px, 4.5vw, 44px); margin: 0 0 12px }
 p.lead { color: var(--muted); margin: 0 0 20px }
 .cta-row { display: flex; gap: 12px }
-.btn { background: var(--accent); border: none; padding: 12px 16px; border-radius: 10px; color: white; font-weight: 600; cursor: pointer }
+.btn { background: linear-gradient(135deg, var(--button), var(--button-2)); border: none; padding: 12px 16px; border-radius: 10px; color: white; font-weight: 600; cursor: pointer }
 .btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: var(--muted) }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gap); margin-top: 28px }
@@ -67,7 +78,7 @@ textarea { min-height: 110px }
   <div class="wrap">
     <header>
       <div class="brand">
-        <img src="images/FS LOGO.png" alt="Firestar Services USA" class="logo">
+        <img src="images/FS LOGO2.png" alt="Firestar Services USA" class="logo">
         <div>
           <div style="font-weight:700">Firestar Services Inc. USA.</div>
           <div class="small">Professional firefighter training — Michigan & nationwide</div>
@@ -110,6 +121,25 @@ textarea { min-height: 110px }
           </div>
         </aside>
       </section>
+
+            <section style="margin-top:28px">
+  <h2></h2>
+  <div class="grid" style="margin-top:12px">
+    <a class="card" href="https://www3.tacticaltraps.com/#120117" target="_blank" rel="noopener noreferrer">
+      <strong>Tactical Traps</strong>
+      <div class="small">
+        <img src="images/LOGOY1.webp" alt="Tactical Traps link" class="logo" style="width:200px; height:auto;">
+      </div>
+    </a>
+
+    <a class="card" href="#booking" target="_blank" rel="noopener noreferrer">
+      <strong>Snap-Tite Products</strong>
+      <div class="small">
+        <img src="images/LOGOY2.png" alt="Snap Tite link" class="logo" style="width:200px; height:auto;">
+      </div>
+    </a>
+  </div>
+</section>
 
       <section id="services" aria-labelledby="services-title">
         <h2 style="margin-top:36px" id="services-title">Services</h2>
@@ -387,8 +417,122 @@ textarea { min-height: 110px }
           </div>
         </div>
 
-      </section>
+</section>
 
+<section id="booking">
+  <h2 style="margin-top:32px">Book / Request a Quote</h2>
+  <p class="small">
+    Request onsite training, ask about custom scenarios, or reserve seats for a course. We’ll respond within 48 hours.
+  </p>
+
+  <div class="contact-grid">
+    <form id="bookingForm"
+          action="https://formspree.io/f/xanlodpe"
+          method="POST">
+      <label class="small">
+        Organization or Name
+        <input name="org" placeholder="Dept. or company" required>
+      </label>
+
+      <label class="small">
+        Contact name
+        <input name="name" placeholder="Your full name" required>
+      </label>
+
+      <label class="small">
+        Email
+        <input type="email" name="email" placeholder="you@domain.com" required>
+      </label>
+
+      <label class="small">
+        Phone
+        <input type="tel" name="phone" placeholder="(555) 555-5555">
+      </label>
+
+      <label class="small">
+        Service
+        <select name="service">
+          <option>Training</option>
+          <option>Consulting</option>
+          <option>Certification</option>
+          <option>More Information</option>
+          <option>Snap-Tite Hose</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label class="small">
+        Preferred date(s)
+        <input name="dates" placeholder="MM/DD/YYYY or date range">
+      </label>
+
+      <label class="small">
+        Details
+        <textarea name="details" placeholder="Number of students, equipment needs, location specifics"></textarea>
+      </label>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="btn" type="submit">Send request</button>
+        <div id="bookingStatus" class="small" aria-live="polite"></div>
+      </div>
+
+      <div class="small" style="margin-top:6px">
+        By submitting you agree to be contacted. For urgent inquiries call <strong>+1 810-941-7951</strong>.
+      </div>
+    </form>
+
+    <aside style="padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
+      <h3>Contact</h3>
+      <div class="small">Firestar Services Inc. USA</div>
+      <div class="small">Serving: Michigan and surrounding regions</div>
+      <div style="margin-top:8px">Phone: <strong>+1 810-941-7951</strong></div>
+      <div style="margin-top:8px">Email: <strong><a href="mailto:info@firestar-usa.example">info@firestar-usa.example</a></strong></div>
+
+      <h4 style="margin-top:12px">Map</h4>
+      <div style="background:#071021;padding:8px;border-radius:8px">
+        <iframe
+          src="https://www.google.com/maps/place/3861+State+Rd,+Fort+Gratiot+Township,+MI+48059/"
+          width="100%"
+          height="200"
+          style="border:0;border-radius:8px;"
+          allowfullscreen="true"
+          loading="eager"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script>
+const form = document.getElementById('bookingForm');
+const statusDiv = document.getElementById('bookingStatus');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // prevent redirect
+  statusDiv.textContent = "Sending...";
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      statusDiv.textContent = "✅ Thanks! Your request has been sent.";
+      form.reset();
+    } else {
+      statusDiv.textContent = "⚠️ Oops! There was a problem. Please try again later.";
+    }
+  } catch (error) {
+    statusDiv.textContent = "⚠️ Network error. Please try again later.";
+    console.error(error);
+  }
+});
+</script>
       <section id="about">
         <div class="about">
           <div>
@@ -443,14 +587,14 @@ textarea { min-height: 110px }
               <img src="images/ADAM.png" alt="Adam Van Der Fyst" class="avatar">
               <div>
                 <div style="font-weight:700">Adam Van Der Fyst</div>
-                <div class="small">Lead Instructor & Operations</div>
+                <div class="small">CEO/Adjunct instructor</div>
               </div>
             </div>
 
             <div class="instructor">
               <img src="images/mark.png" alt="Mark Van Der Fyst" class="avatar">
               <div>
-                <div style="font-weight:700">Chief Trainer, Mark Van Der Fyst</div>
+                <div style="font-weight:700">COO/Lead Instructor, Mark Van Der Fyst</div>
                 <div class="small">25+ years — structural and wildland experience</div>
               </div>
             </div>
@@ -460,53 +604,7 @@ textarea { min-height: 110px }
         </div>
       </section>
 
-      <section id="booking">
-        <h2 style="margin-top:32px">Book / Request a Quote</h2>
-        <p class="small">Request onsite training, ask about custom scenarios, or reserve seats for a course. We’ll respond within 48 hours (or insert your SLA).</p>
-
-        <div class="contact-grid">
-          <form id="bookingForm" onsubmit="handleBooking(event)">
-            <label class="small">Organization or Name <input name="org" placeholder="Dept. or company" required></label>
-            <label class="small">Contact name <input name="name" placeholder="Your full name" required></label>
-            <label class="small">Email <input type="email" name="email" placeholder="you@domain.com" required></label>
-            <label class="small">Phone <input type="tel" name="phone" placeholder="(555) 555-5555"></label>
-            <label class="small">Service <select name="service">
-              <option>Training</option>
-              <option>Consulting</option>
-              <option>Certification</option>
-              <option>More Information</option>
-              <option>Other</option>
-            </select></label>
-            <label class="small">Preferred date(s) <input name="dates" placeholder="MM/DD/YYYY or date range"></label>
-            <label class="small">Details <textarea name="details" placeholder="Number of students, equipment needs, location specifics"></textarea></label>
-
-            <div style="display:flex;gap:10px;align-items:center">
-              <button class="btn" type="submit">Send request</button>
-              <div id="bookingStatus" class="small" aria-live="polite"></div>
-            </div>
-
-            <div class="small" style="margin-top:6px">By submitting you agree to be contacted. For urgent inquiries call <strong>+1 810-941-7951</strong>.</div>
-          </form>
-
-          <aside style="padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);">
-            <h3>Contact</h3>
-            <div class="small">Firestar Services Inc. USA</div>
-            <div class="small">Serving: Michigan and surrounding regions</div>
-            <div style="margin-top:8px">Phone: <strong>+1 810-941-7951</strong></div>
-            <div style="margin-top:8px">Email: <strong><a href="mailto:info@firestar-usa.example">info@firestar-usa.example</a></strong></div>
-
-            <h4 style="margin-top:12px">Map</h4>
-            <div style="background:#071021;padding:8px;border-radius:8px">
-              <iframe src="https://www.google.com/maps/place/3861+State+Rd,+Fort+Gratiot+Townshi p,+MI+48059/@43.02086,-82.4973455,159m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88259 940ab308dbd:0x273635da2052c401!8m2!3d43.02086!4d-82.4967018!16s%2Fg%2F11gj wfd_18!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDgwNS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="200" style="border:0;border-radius:8px;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section style="margin-top:28px">
-        <h2>Sponsors</h2>
-
-      </section>
+    </main>
 
       <section style="margin-top:28px">
         <h2>FAQ</h2>
